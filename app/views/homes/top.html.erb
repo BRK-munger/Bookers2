@@ -17,22 +17,20 @@
             <strong>Bookers</strong>
              ,
           </p>
-          <p>you can shara and exchange your opinions , and emotions</p>
+          <p>you can shara and exchange your opinions , inpressions , and emotions</p>
           <p> about various books!</p>
           <div class="btn-wrapper col-10 mx-auto">
             <li class="row">
-              <i class="btn btn-info btn-sm btn-block mb-3 sign">
-                <%= link_to new_user_session_path, class: 'nav-link' do %>
-              Log in</i>
-                <% end %>
-                
-            <li class="nav-item">
-              <i class="btn btn-success btn-sm btn-block sign_up">
-                <%= link_to new_user_registration_path, class: 'nav-link' do %>
-              Sign up</i>
-                <% end %>
+            <a class="btn btn-info btn-sm btn-block mb-3 sign_in" href="/users/sign_in">Log in</a>
             </li>
+            <li class="row">
+            <a class="btn btn-success btn-sm btn-block sign_up" href="/users/sign_up">Sign up</a>     
+            
       </div>
     </div>
   </main>
 </html>
+
+
+
+
