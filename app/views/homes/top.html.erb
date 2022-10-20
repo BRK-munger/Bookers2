@@ -1,1 +1,38 @@
-<h1>Topページ</h1>
+<!DOCTYPE html>
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+  <header></header>
+  <main>
+    <p id="notice"></p>
+    <div class="container">
+      <div class="row"></div>
+      <div class="mx-auto col-11 col-sm10 col-lg-8 col-xl-6">
+          <h1>welcome to
+            <i class="fas fa-book"></i>
+            <strong>Bookers</strong>
+             !!
+          </h1>
+          <p>
+            In
+            <i class="fas fa-book"></i>
+            <strong>Bookers</strong>
+             ,
+          </p>
+          <p>you can shara and exchange your opinions , and emotions</p>
+          <p> about various books!</p>
+          <div class="btn-wrapper col-10 mx-auto">
+            <li class="row">
+              <i class="btn btn-info btn-sm btn-block mb-3 sign">
+                <%= link_to new_user_session_path, class: 'nav-link' do %>
+              Log in</i>
+                <% end %>
+                
+            <li class="nav-item">
+              <i class="btn btn-success btn-sm btn-block sign_up">
+                <%= link_to new_user_registration_path, class: 'nav-link' do %>
+              Sign up</i>
+                <% end %>
+            </li>
+      </div>
+    </div>
+  </main>
+</html>
