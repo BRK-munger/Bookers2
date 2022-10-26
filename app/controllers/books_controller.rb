@@ -11,9 +11,11 @@ class BooksController < ApplicationController
     flash[:notice] = "You have created book successfully."
       redirect_to book_path(@book.id)
     else
-      render :new
+      @books = Book.all
+      @user = current_user
+      render :index
+    end
   end
-end
 
 
   def index
@@ -24,20 +26,20 @@ end
 
 
   def show
+    @book_new = Book.new
     @book = Book.find(params[:id])
-    @user = current_user
+    @user = @book.user
   end
 
 
 
   def edit
     @book = Book.find(params[:id])
-    if @book.user == current_user
-      render "edit"
-    else
+    #byebug
+    if @book.user != current_user
       redirect_to books_path
+    end
   end
-end
 
 
   def update
@@ -64,4 +66,3 @@ end
     params.require(:book).permit(:title, :body)
   end
 end
-　

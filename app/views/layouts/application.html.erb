@@ -22,13 +22,13 @@
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
             <li class="nav-item">
-            <%= link_to root_path, class: 'nav-link' do %>
+            <%= link_to user_path(current_user.id), class: 'nav-link' do %>
               <i class="fas fa-home"></i>
               Home
             <% end %>
             <li class="nav-item">
             <%= link_to users_path, class: 'nav-link' do %>
-              <i class="fas fa-sign-out-alt"></i>
+              <i class="fas fa-users"></i>
               Users
             <% end %>
             <li class="nav-item">

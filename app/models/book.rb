@@ -1,10 +1,11 @@
 class Book < ApplicationRecord
   has_one_attached :image
-  
-  validates :title, presence: true
-  validates :body, presence: true
 
-  
+  validates :title, presence: true
+  validates :body, presence: true, length: { maximum: 200 }
+
+
+
   belongs_to :user
 
   def get_image
@@ -24,6 +25,6 @@ class Book < ApplicationRecord
     end
     profile_image.variant(resize_to_limit: [width, height]).processed
   end
-  
+
 end
-  
+
